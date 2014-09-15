@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="androidapp">
+	<head>
+		<script src="angular.min.js"></script>
+		<script src="angular-route.min.js"></script>
+		<script src="controller.js"></script>
+		<script src="math.min.js"></script>
+	</head>
+	<body ng-controller="mainCtrl">
+		<header>
+			<a href="#">home</a>
+			<a href="#depth">depth</a>
+		</header>
+		<div ng-view>
+			<!-- this is where the views will be loaded -->
+		</div>
+	</body>	
+</html>
