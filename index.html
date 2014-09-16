@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html ng-app="androidapp">
 	<head>
+	    <!-- Load boostrap to beautify app -->
+	    <link rel="stylesheet" href="bootstrap.min.css">
+	    <!-- Load the javascript required for angular -->
 		<script src="angular.min.js"></script>
 		<script src="angular-route.min.js"></script>
-		<script src="controller.js"></script>
 		<script src="math.min.js"></script>
+		<script src="controller.js"></script>
+		
 	</head>
-	<body ng-controller="mainCtrl">
+	<body class="col-sm-12" ng-controller="mainCtrl">
 		<header>
 			<a href="#">home</a>
 			<a href="#depth">depth</a>

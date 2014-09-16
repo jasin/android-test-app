@@ -1,8 +1,14 @@
-<div class="angularDepth">
-	<lable>angle</lable>
-	<input type="textbox" ng-model="angle">
-	<lable>length</lable>
-	<input type="textbox" ng-model="length"> 
-	<button ng-click="calculate()">Calculate</button>
-	{{ result }}
+<div class="form-group">
+	<lable for="angleOfCompound">Compound angle</lable>
+	<input type="textbox" class="form-control" id="angleOfCompound" ng-model="compoundAngle">
+</div>
+<div class="form-group">
+	<lable for="compoundDialAdjustment">Compound dial adjustment</lable>
+	<input type="textbox" class="form-control" id="compoundDialAdjustment" ng-model="dialAdjustment"> 
+</div>
+<div>	
+	<button class="btn" ng-click="calculate()">Calculate</button>
+</div>
+<div>
+    {{result}}
 </div>

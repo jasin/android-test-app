@@ -1,5 +1,5 @@
 (function() {
-var app = angular.module('androidapp', ['ngRoute']); // THis line is wrong look in console!!!!!
+var app = angular.module('androidapp', ['ngRoute']); 
 
     app.config(function($routeProvider){
         $routeProvider
@@ -21,10 +21,11 @@ var app = angular.module('androidapp', ['ngRoute']); // THis line is wrong look 
     
     app.controller('mathCtrl', function($scope){
         
-        $scope.angle = 5.75;
+        $scope.compoundAngle = 5.75;
+        $scope.dialAdjustment = 0.001;
         
         $scope.calculate = function() {
-           $scope.result =  math.round(math.sin(math.unit($scope.angle, 'deg')) * $scope.length, 4);
+           $scope.result =  math.round(math.sin(math.unit($scope.compoundAngle, 'deg')) * $scope.dialAdjustment, 4);
         };
         // remember ng-model is putting things on $scope so in the controller you have to put things
         // on the $scope as well. Everything is linked by the $scope
