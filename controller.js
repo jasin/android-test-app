@@ -10,8 +10,13 @@ var app = angular.module('androidapp', ['ngRoute']);
             })
             
             .when('/depth', {
-                templateUrl: 'angulardepth.html',
-                controller: 'mathCtrl'
+                templateUrl: 'formulas/comp_depth.html',
+                controller: 'compoundDepthCtrl'
+            })
+            
+            .when('/bolt_circle', {
+                templateUrl: 'formulas/bolt_circle.html',
+                controller: 'boltCircle'
             })
     });
     
@@ -19,7 +24,37 @@ var app = angular.module('androidapp', ['ngRoute']);
         
     });
     
-    app.controller('mathCtrl', function($scope){
+    app.controller('boltCircle', function($scope){
+        
+        // initialize some variables
+        $scope.angleOffset = 0;
+        $scope.boltHoles = 3;
+        $scope.diameter = 1;
+        
+        // Do the math for the X/Y values of a bolt circle
+        $scope.calculate = function(){
+            $scope.angle = 360/$scope.boltHoles;
+            $scope.bolts = [];
+            for(i=0; i<$scope.boltHoles; i++) {
+                $scope.bolts.push({bolt: {angle: null, x: null, y: null} });
+                if (i === 0){
+                    $scope.bolts[i].bolt.angle = $scope.angleOffset + 0;
+                } else {
+                    $scope.bolts[i].bolt.angle = $scope.bolts[i-1].bolt.angle + $scope.angle;
+                }
+                
+                $scope.bolts[i].bolt.x = math.round(($scope.diameter/2) * math.cos(math.unit($scope.bolts[i].bolt.angle, 'deg')), 4);
+                $scope.bolts[i].bolt.y = math.round(($scope.diameter/2) * math.sin(math.unit($scope.bolts[i].bolt.angle, 'deg')), 4);
+            }
+            
+            console.log($scope.bolts);
+            for(var bolt in $scope.bolts)
+                console.log(bolt);
+        };
+        
+    });
+    
+    app.controller('compoundDepthCtrl', function($scope){
         
         $scope.compoundAngle = 5.75;
         $scope.dialAdjustment = 0.001;

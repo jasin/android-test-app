@@ -1,0 +1,24 @@
+<div class="form-group">
+    <label for="angleOffset">Angle Offset</label>
+    <input type="number" class="form-control" id="angleOffset" ng-model="angleOffset">
+</div>
+<div class="form-group">
+    <label for="boltHoles">Number of Bolt Holes</label>
+    <input type="number" class="form-control" id="boltHoles" ng-model="boltHoles">
+</div>
+<div class="form-group">
+    <label for="diameter">Diamater of Bolt Cirle</label>
+    <input type="number" class="form-control" id="diameter" ng-model="diameter">
+</div>
+<div>
+    <button class="btn" ng-click="calculate()">Calculate</button>
+</div>
+<div>
+    {{angle}}
+</div>
+<div ng-repeat="bolt in bolts">
+    {{bolt}}
+</div>
+<div>
+    {{debug}}
+</div>
