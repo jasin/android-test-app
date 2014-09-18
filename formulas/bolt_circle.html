@@ -10,15 +10,24 @@
     <label for="diameter">Diamater of Bolt Cirle</label>
     <input type="number" class="form-control" id="diameter" ng-model="diameter">
 </div>
-<div>
+<div class="form-group">
     <button class="btn" ng-click="calculate()">Calculate</button>
 </div>
 <div>
-    {{angle}}
-</div>
-<div ng-repeat="bolt in bolts">
-    {{bolt}}
-</div>
-<div>
-    {{debug}}
+    <table class="table table-condensed">
+	    <thead>
+	        <tr>
+	        	<th>Angle</th>
+	        	<th>X-Cord.</th>
+	        	<th>Y-cord.</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr ng-repeat="result in bolts">
+	            <td><div>{{result.bolt.angle}}</div></td>
+	            <td><div>{{result.bolt.x}}</div></td>
+	            <td><div>{{result.bolt.y}}</div></td>
+	        </tr>
+	    </tbody>
+    </table>
 </div>
