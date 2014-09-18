@@ -14,19 +14,19 @@
     <button class="btn" ng-click="calculate()">Calculate</button>
 </div>
 <div>
-    <table class="table table-condensed">
+    <table class="table table-condensed" ng-show="bolts.length">
 	    <thead>
 	        <tr>
-	        	<th>Angle</th>
-	        	<th>X-Cord.</th>
-	        	<th>Y-cord.</th>
+	        	<th align="right">Angle</th>
+	        	<th align="right">X-Cord.</th>
+	        	<th align="right">Y-cord.</th>
 	        </tr>
 	    </thead>
 	    <tbody>
 	        <tr ng-repeat="result in bolts">
-	            <td><div>{{result.bolt.angle}}</div></td>
-	            <td><div>{{result.bolt.x}}</div></td>
-	            <td><div>{{result.bolt.y}}</div></td>
+	            <td align="right"><div>{{result.bolt.angle}}</div></td>
+	            <td align="right"><div>{{result.bolt.x}}</div></td>
+	            <td align="right"><div>{{result.bolt.y}}</div></td>
 	        </tr>
 	    </tbody>
     </table>

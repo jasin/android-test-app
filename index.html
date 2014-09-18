@@ -2,20 +2,28 @@
 <html ng-app="androidapp">
 	<head>
 	    <!-- Load boostrap to beautify app -->
-	    <link rel="stylesheet" href="bootstrap.min.css">
+	    <link rel="stylesheet" href="css/bootstrap.min.css">
+	    <link rel="stylesheet" href="css/custom.css">
 	    <!-- Load the javascript required for angular -->
-		<script src="angular.min.js"></script>
-		<script src="angular-route.min.js"></script>
-		<script src="math.min.js"></script>
-		<script src="controller.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-route.min.js"></script>
+		<script src="js/dropdown.js"></script>
+		<script src="js/math.min.js"></script>
+		<script src="js/controller.js"></script>
 		
 	</head>
-	<body class="col-sm-12" ng-controller="mainCtrl">
+	<body class="col-sm-12 col-md-4 col-md-push-4" ng-controller="mainCtrl">
 		<header>
 			<a href="#">home</a>
 			<a href="#depth">depth</a>
 			<a href="#bolt_circle">Bolt Circle</a>
 		</header>
+		<select ng-model="menu_select" ng-change="change()">
+		    <option value=""></option>
+		    <option value="/">home</option>
+		    <option value="/depth">depth</option>
+		    <option value="/bolt_circle">bolt circle</option>
+		</select>
 		<div ng-view>
 			<!-- this is where the views will be loaded -->
 		</div>

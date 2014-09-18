@@ -20,7 +20,12 @@ var app = angular.module('androidapp', ['ngRoute']);
             })
     });
     
-    app.controller('mainCtrl', function($scope){
+    app.controller('mainCtrl', function($scope, $location){
+        
+        $scope.change = function(){
+            console.log($scope.menu_select);
+            $location.path($scope.menu_select);
+        };
         
     });
     
@@ -43,13 +48,11 @@ var app = angular.module('androidapp', ['ngRoute']);
                     $scope.bolts[i].bolt.angle = $scope.bolts[i-1].bolt.angle + $scope.angle;
                 }
                 
-                $scope.bolts[i].bolt.x = math.round(($scope.diameter/2) * math.cos(math.unit($scope.bolts[i].bolt.angle, 'deg')), 4);
-                $scope.bolts[i].bolt.y = math.round(($scope.diameter/2) * math.sin(math.unit($scope.bolts[i].bolt.angle, 'deg')), 4);
+                $scope.bolts[i].bolt.x = math.format(math.round(($scope.diameter/2) * math.cos(math.unit($scope.bolts[i].bolt.angle, 'deg')), 4), {notation: 'fixed', precision: 4});
+                $scope.bolts[i].bolt.y = math.format(math.round(($scope.diameter/2) * math.sin(math.unit($scope.bolts[i].bolt.angle, 'deg')), 4), {notation: 'fixed', precision: 4});
             }
             
             console.log($scope.bolts);
-            for(var bolt in $scope.bolts)
-                console.log(bolt);
         };
         
     });
