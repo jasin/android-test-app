@@ -13,10 +13,13 @@
 		
 	</head>
 	<body class="col-sm-12 col-md-4 col-md-offset-4" ng-controller="dropDownCtrl">
-		<header class="row padding-top grad">
+		<header class="row padding-header grad">
 			<div class="col-md-12">
-				<div class="btn-group dropdown pull-right">
-	    			<button type="button" class="btn dropdown-toggle" ng-click="sort()">Click here <span class="caret"></span></button>
+				<div class="pull-left">
+					<img src="images/android-micrometer.png" width="32" height="32">
+				</div>
+				<div class="dropdown pull-right">
+	    			<a href class="dropdown-toggle" ng-click="sort()"><img src="images/android-overflow-icon.png" width="32" height="32"></a>
 	    			<ul class="dropdown-menu col-md-2 col-md-offset-10">
 	    				<li ng-repeat="item in items">
 	    					<a ng-click="change(item.url)">{{item.menuItem}}</a>
