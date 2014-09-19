@@ -13,6 +13,10 @@
     
     <gap:platform name="android" />
     
+    <icon src="mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
+    
+    <gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
+    
     </widget>
     
     
