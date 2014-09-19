@@ -5,3 +5,7 @@ th {
 .padding-top {
     padding-top: 10px;
 }
+
+.grad {
+    background: linear-gradient(to right, #000, #333);
+}
