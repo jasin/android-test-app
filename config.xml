@@ -17,10 +17,10 @@
     
     <icon src="mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
     
-    <gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="port-ldpi" />
-    <gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="port-mdpi" width="144" height="144" />
-    <gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="port-hdpi" />
-    <gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="port-xhdpi" width="144" height="144" />
+    <!--<gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="ldpi" />-->
+    <gap:splash src="res/mdpi/mdpi.9.png" gap:platform="android" gap:qualifier="port-mdpi" width="320" height="480" />
+    <gap:splash src="res/hdpi/hdpi.9.png" gap:platform="android" gap:qualifier="port-hdpi" width="480" height="800" />
+    <gap:splash src="res/xhdpi/xhdpi.9.png" gap:platform="android" gap:qualifier="port-xhdpi" width="720" height="1280" />
     
     </widget>
     
