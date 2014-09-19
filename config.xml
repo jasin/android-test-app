@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.coleburt.development"
+        versionCode = "1" 
+        version     = "0.1.0" >
+        
+    <name>Machinist Cookbook</name>
+    
+    <description>Recipes for common Machinist task</description>
+    
+    <author href="https://build.phonegap.com" email="support@phonegap.com">Jasin</author>
+    
+    </widget>
