@@ -17,16 +17,18 @@
     <table class="table table-condensed" ng-show="bolts.length">
 	    <thead>
 	        <tr>
-	        	<th align="right">Angle</th>
-	        	<th align="right">X-Cord.</th>
-	        	<th align="right">Y-cord.</th>
+	            <th>No.</th>
+	        	<th>Angle</th>
+	        	<th>X-Cord.</th>
+	        	<th>Y-cord.</th>
 	        </tr>
 	    </thead>
 	    <tbody>
 	        <tr ng-repeat="result in bolts">
-	            <td align="right"><div>{{result.bolt.angle}}</div></td>
-	            <td align="right"><div>{{result.bolt.x}}</div></td>
-	            <td align="right"><div>{{result.bolt.y}}</div></td>
+	            <td><div>{{result.bolt.number}}</div></td>
+	            <td><div>{{result.bolt.angle}}</div></td>
+	            <td><div>{{result.bolt.x}}</div></td>
+	            <td><div>{{result.bolt.y}}</div></td>
 	        </tr>
 	    </tbody>
     </table>

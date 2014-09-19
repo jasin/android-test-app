@@ -63,7 +63,7 @@ var app = angular.module('androidapp', ['ngRoute', 'ui.bootstrap']);
             $scope.angle = 360/$scope.boltHoles;
             $scope.bolts = [];
             for(i=0; i<$scope.boltHoles; i++) {
-                $scope.bolts.push({bolt: {angle: null, x: null, y: null} });
+                $scope.bolts.push({bolt: {number: i+1, angle: null, x: null, y: null} });
                 if (i === 0){
                     $scope.bolts[i].bolt.angle = $scope.angleOffset + 0;
                 } else {
