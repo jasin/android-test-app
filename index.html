@@ -7,23 +7,24 @@
 	    <!-- Load the javascript required for angular -->
 		<script src="js/angular.min.js"></script>
 		<script src="js/angular-route.min.js"></script>
-		<script src="js/dropdown.js"></script>
+		<script src="js/ui-bootstrap-tpls-0.11.0.min.js"></script>
 		<script src="js/math.min.js"></script>
 		<script src="js/controller.js"></script>
 		
 	</head>
-	<body class="col-sm-12 col-md-4 col-md-push-4" ng-controller="mainCtrl">
-		<header>
-			<a href="#">home</a>
-			<a href="#depth">depth</a>
-			<a href="#bolt_circle">Bolt Circle</a>
+	<body class="col-sm-12 col-md-4 col-md-offset-4" ng-controller="dropDownCtrl">
+		<header class="row padding-top">
+			<div class="col-md-12">
+				<div class="btn-group dropdown pull-right">
+	    			<button type="button" class="btn dropdown-toggle" ng-click="sort()">Click here <span class="caret"></span></button>
+	    			<ul class="dropdown-menu col-md-2 col-md-offset-10">
+	    				<li ng-repeat="item in items">
+	    					<a ng-click="change(item.url)">{{item.menuItem}}</a>
+	    				</li>
+	    			</ul>
+	    		</div>
+    		</div>
 		</header>
-		<select ng-model="menu_select" ng-change="change()">
-		    <option value=""></option>
-		    <option value="/">home</option>
-		    <option value="/depth">depth</option>
-		    <option value="/bolt_circle">bolt circle</option>
-		</select>
 		<div ng-view>
 			<!-- this is where the views will be loaded -->
 		</div>

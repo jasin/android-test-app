@@ -1,5 +1,5 @@
 (function() {
-var app = angular.module('androidapp', ['ngRoute']); 
+var app = angular.module('androidapp', ['ngRoute', 'ui.bootstrap']); 
 
     app.config(function($routeProvider){
         $routeProvider
@@ -27,6 +27,28 @@ var app = angular.module('androidapp', ['ngRoute']);
             $location.path($scope.menu_select);
         };
         
+    });
+    
+    app.controller('dropDownCtrl', function($scope, $location) {
+        
+        //console.log(menuItems);
+        
+        $scope.sort = function(){
+            $scope.items = menuItems.slice(0);
+             for(i=$scope.items.length-1; i>=0; i--){
+                var obj = $scope.items[i];
+            
+                if($location.path() === obj.url){
+                    $scope.items.splice(i, 1);
+                }
+            }
+        };
+
+        
+        $scope.change = function(url){
+            $location.path(url);
+        };
+          
     });
     
     app.controller('boltCircle', function($scope){
@@ -68,4 +90,10 @@ var app = angular.module('androidapp', ['ngRoute']);
         // remember ng-model is putting things on $scope so in the controller you have to put things
         // on the $scope as well. Everything is linked by the $scope
     });
+    
+    var menuItems = [
+           {menuItem: 'home', url: '/'},
+           {menuItem: 'depth', url: '/depth'},
+           {menuItem: 'bolt circle', url: '/bolt_circle'}
+        ];
 }) ();
