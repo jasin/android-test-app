@@ -15,7 +15,7 @@
     
     <preference name="SplashScreen" value="splash" />
     
-    <!--<icon src="mdpi.png" gap:platform="android" gap:qualifier="mdpi" />-->
+    <icon src="icon.png" />
     
     <!--<gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="ldpi" />-->
     <!--<gap:splash src="res/mdpi/mdpi.9.png" gap:platform="android" gap:qualifier="port-mdpi" />-->
