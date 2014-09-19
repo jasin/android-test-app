@@ -15,7 +15,10 @@
     
     <icon src="mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
     
-    <gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
+    <gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="port-ldpi" />
+    <gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="port-mdpi" />
+    <gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="port-hdpi" />
+    <gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="port-xhdpi" />
     
     </widget>
     
