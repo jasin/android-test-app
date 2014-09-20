@@ -14,7 +14,8 @@
     <gap:platform name="android" />
     
     <preference name="SplashScreen" value="splash" />
-    <preference name="splash-screen-duration" value="1000"/>
+    <preference name="splash-screen-duration" value="1000" />
+    <preference name="fullscreen" value="false" />
     
     <icon src="icon.png" />
     
