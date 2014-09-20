@@ -1,36 +1,31 @@
-<!DOCTYPE html>
-<html ng-app="androidapp">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-	    <!-- Load boostrap to beautify app -->
-	    <link rel="stylesheet" href="css/bootstrap.min.css">
-	    <link rel="stylesheet" href="css/custom.css">
-	    <!-- Load the javascript required for angular -->
-		<script src="js/angular.min.js"></script>
-		<script src="js/angular-route.min.js"></script>
-		<script src="js/ui-bootstrap-tpls-0.11.0.min.js"></script>
-		<script src="js/math.min.js"></script>
-		<script src="js/controller.js"></script>
-		
-	</head>
-	<body class="col-sm-12 col-md-4 col-md-offset-4" ng-controller="dropDownCtrl">
-		<header class="row padding-header grad">
-			<div class="col-md-12">
-				<div class="pull-left">
-					<img src="images/android-micrometer.png" width="32" height="32">
-				</div>
-				<div class="dropdown pull-right">
-	    			<a href class="dropdown-toggle" ng-click="sort()"><img src="images/android-overflow-icon.png" width="32" height="32"></a>
-	    			<ul class="dropdown-menu col-md-2 col-md-offset-10">
-	    				<li ng-repeat="item in items">
-	    					<a ng-click="change(item.url)">{{item.menuItem}}</a>
-	    				</li>
-	    			</ul>
-	    		</div>
-    		</div>
-		</header>
-		<div ng-view>
-			<!-- this is where the views will be loaded -->
-		</div>
-	</body>	
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Menu Button Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Register the event listener
+        document.addEventListener("menubutton", onMenuKeyDown, false);
+    }
+
+    // Handle the menu button
+    //
+    function onMenuKeyDown() {
+    }
+
+    </script>
+  </head>
+  <body onload="onLoad()">
+  </body>
 </html>
